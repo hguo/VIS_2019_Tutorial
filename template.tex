@@ -1,0 +1,279 @@
+%\documentclass[journal]{vgtc}                % final (journal style)
+%\documentclass[review,journal]{vgtc}         % review (journal style)
+%\documentclass[widereview]{vgtc}             % wide-spaced review
+\documentclass[preprint,journal]{vgtc}       % preprint (journal style)
+%\documentclass[electronic,journal]{vgtc}     % electronic version, journal
+
+%% Uncomment one of the lines above depending on where your paper is
+%% in the conference process. ``review'' and ``widereview'' are for review
+%% submission, ``preprint'' is for pre-publication, and the final version
+%% doesn't use a specific qualifier. Further, ``electronic'' includes
+%% hyperreferences for more convenient online viewing.
+
+%% Please use one of the ``review'' options in combination with the
+%% assigned online id (see below) ONLY if your paper uses a double blind
+%% review process. Some conferences, like IEEE Vis and InfoVis, have NOT
+%% in the past.
+
+%% Please note that the use of figures other than the optional teaser is not permitted on the first page
+%% of the journal version.  Figures should begin on the second page and be
+%% in CMYK or Grey scale format, otherwise, colour shifting may occur
+%% during the printing process.  Papers submitted with figures other than the optional teaser on the
+%% first page will be refused.
+
+%% These three lines bring in essential packages: ``mathptmx'' for Type 1
+%% typefaces, ``graphicx'' for inclusion of EPS figures. and ``times''
+%% for proper handling of the times font family.
+
+\usepackage{mathptmx}
+\usepackage{graphicx}
+\usepackage{times}
+\usepackage{float}
+\usepackage[style=ieee,backend=biber,defernumbers=true]{biblatex}
+
+%% We encourage the use of mathptmx for consistent usage of times font
+%% throughout the proceedings. However, if you encounter conflicts
+%% with other math-related packages, you may want to disable it.
+
+%% This turns references into clickable hyperlinks.
+\usepackage[bookmarks,backref=true,linkcolor=black]{hyperref} %,colorlinks
+\hypersetup{
+  pdfauthor = {},
+  pdftitle = {},
+  pdfsubject = {},
+  pdfkeywords = {},
+  colorlinks=true,
+  linkcolor= black,
+  citecolor= black,
+  pageanchor=true,
+  urlcolor = black,
+  plainpages = false,
+  linktocpage
+}
+
+%% If you are submitting a paper to a conference for review with a double
+%% blind reviewing process, please replace the value ``0'' below with your
+%% OnlineID. Otherwise, you may safely leave it at ``0''.
+\onlineid{0}
+
+%% declare the category of your paper, only shown in review mode
+\vgtccategory{Research}
+
+%% allow for this line if you want the electronic option to work properly
+\vgtcinsertpkg
+
+%% In preprint mode you may define your own headline.
+\preprinttext{}%To appear in an IEEE VGTC sponsored conference.}
+
+%% Paper title.
+\title{Distribution-driven Data Representation, Visualization, and \\ Uncertainty Analysis}
+
+%% This is how authors are specified in the journal style
+
+%% indicate IEEE Member or Student Member in form indicated below
+\author{Soumya Dutta, Hanqi Guo, Han-Wei Shen, and Hans-Christian Hege}
+\authorfooter{
+%% insert punctuation at end of each item
+\item
+ Soumya Dutta is with Los Alamos National Laboratory. \\E-mail: sdutta@lanl.gov.
+\item
+ Hanqi Guo is with Argonne National Laboratory. Email: hguo@anl.gov.
+\item
+ Han-Wei Shen is with The Ohio State University. \\Email: shen.94@osu.edu.
+\item
+ Hans-Christian Hege is with Zuse Institute Berlin. Email: hege@zib.de.
+}
+
+%other entries to be set up for journal
+% \shortauthortitle{Biv \MakeLowercase{\textit{et al.}}: Global Illumination for Fun and Profit}
+%\shortauthortitle{Firstauthor \MakeLowercase{\textit{et al.}}: Paper Title}
+
+%% Uncomment below to disable the manuscript note
+%\renewcommand{\manuscriptnotetxt}{}
+
+%% Copyright space is enabled by default as required by guidelines.
+%% It is disabled by the 'review' option or via the following command:
+% \nocopyrightspace
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%% START OF THE PAPER %%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\addverticalspace}{\vspace{3mm}}
+
+\bibliography{template}
+\nocite{*}
+
+\DeclareBibliographyCategory{Dutta}
+\addtocategory{Dutta}{tao14fs,tao14fc,tao13uni,tao16fs,wang16fv}
+
+\DeclareBibliographyCategory{Guo}
+\addtocategory{Guo}{guo13tvcg,guo14tvcg,liu16pvis,guo16tvcg}
+
+\DeclareBibliographyCategory{Shen}
+\addtocategory{Shen}{skraba2016,skraba2015,skraba2014b,skraba2014a,wang2013}
+
+\DeclareBibliographyCategory{Hege}
+\addtocategory{Hege}{weinkauf07c,weinkauf10c,weinkauf12a,weinkauf11b,stoeter12}
+
+% \DeclareFieldFormat{labelnumberwidth}{}
+% \setlength{\biblabelsep}{0pt}
+
+
+\begin{document}
+
+%% The ``\maketitle'' command must be the first command after the
+%% ``\begin{document}'' command. It prepares and prints the title block.
+
+%% the only exception to this rule is the \firstsection command
+
+\maketitle
+
+\section*{TITLE}
+Distribution-driven Data Representation, Visualization, and \\ Uncertainty Analysis.
+
+\section*{DURATION}
+The tutorial is a proposal of a half-day tutorial, including 180 minutes presentation, 20 minutes discussion, and 20 minutes coffee break.
+
+\section*{SCHEDULE}
+
+\vspace{-0.1in}
+\begin{table}[H]
+\begin{tabular}{lll}
+Introduction & Soumya Dutta & 10 minutes\\
+Talk 1 & Han-Wei Shen & 45 minutes\\
+Talk 2 & Soumya Dutta & 45 minutes\\
+Coffee Break & -------- & 20 minutes\\
+Talk 3 & Hans-Christian Hege & 45 minutes\\
+Talk 4 & Hanqi Guo & 45 minutes\\
+Conclusion & Hans-Christian Hege & 10 minutes
+\end{tabular}
+\end{table}
+
+\section*{ORGANIZERS}
+
+\vspace{-0.1in}
+\begin{table}[H]
+\begin{tabular}{ll}
+Soumya Dutta & Los Alamos National Laboratory\\
+Hanqi Guo & Argonne National Laboratory\\
+Han-Wei Shen & The Ohio State University\\
+Hans-Christian Hege & Zuse Institute Berlin\\
+\end{tabular}
+\end{table}
+
+\section*{ABSTRACT}
+Efficient analysis and visualization of data using statistical methods is a popular pathway in the visualization community. As the size of data is growing rapidly, researchers have adopted for techniques of data exploration which are primarily driven by efficient identification and analysis of important regions (generally termed as features), instead of looking at the data at its entirety. Use of probability distributions in this context is found to be attractive by many researchers. Distributions computed from data samples are capable of compactly representing the statistical characteristics of features, which can be efficiently analyzed and visualized. Recent developments in the visualization domain have demonstrated the applicability of distribution-based data visualization methods by introducing novel stochastic algorithms and addressing problems such as: feature identification, extraction, and tracking; multi-variable relationship exploration; query-driven visualization; integral curve-based flow feature analysis; and many more.
+
+As we step into the era of big data, relevance of distribution-based methods has become even more prominent. Since, the I/O speed can not keep up with the computation speed, storage of extreme-scale raw data, generated by high-resolution simulations is facing a critical bottleneck. Therefore, data analysts are favoring alternative methods leading to summarization of large data in a reduced and compact format, while preserving as much information as possible. Researchers have shown that, by transforming the data into a distribution-based representation, significant data reduction is possible. Furthermore, this reduced data can be used as a replacement of the raw data enabling flexible exploration with the much needed capability of uncertainty quantification during visualization. A wide range of visualization applications using distribution-based data have been developed already which evidently indicate that, distribution-based methods will provide a promising path-forward for the future data visualization researches.
+
+Given the promising aspects of distribution-based methods in visual analysis, we would like to organize a tutorial on the topic of \textit{distribution-based visualization methods}. The tutorial will highlight concepts regarding distribution-based data modeling appropriate for a variety of applications. A comprehensive discussion on many state-of-the-art visualization methods that uses distribution data will be carried out which will serve as a ground work for the audience who are interested in conducting research in this avenue. We will systematically introduce different categories of visual-analytics tasks that have utilized and benefited from distributions. Finally, latest research trends adopting \textit{in situ} distribution-guided data summarization enabling scalable and flexible post-analysis based visualization techniques will be discussed. We will conclude our session by highlighting several future scopes and open problems in this area needed to be solved for the further advancements of distribution-based methods in visualization.
+
+\section*{LEVEL}
+Intermediate/Advanced.
+
+\section*{PREREQUISITE}
+A general understanding of probability, statistics, and statistical distributions, including basic knowledge of uncertainty quantification in visualization.
+
+% \section*{AUDIENCE}
+% The intended audience includes students, researchers and practitioners who are interested in the recent advances in flow visualization. More details to be added.
+
+\section*{DESCRIPTION}
+The brief outline of each section is presented below:
+
+\addverticalspace
+
+\noindent\textbf{\textit{Distribution-based Data Representation and Modeling}}\\
+\textbf{Han-Wei Shen}
+\paragraph{Abstract}
+Abstract and short description
+
+\addverticalspace
+
+\noindent\textbf{\textit{Stochastic Algorithms for Visual Analysis}}\\
+\textbf{Soumya Dutta}
+\paragraph{Abstract}
+Abstract and short description
+
+\addverticalspace
+
+\noindent\textbf{\textit{Uncertainty Analysis and Visualization}}\\
+\textbf{Hans-Christian Hege}
+\paragraph{Abstract}
+Abstract and short description
+
+\addverticalspace
+
+\noindent\textbf{\textit{Application of Distributions in Visualization}}\\
+\textbf{Hanqi Guo}
+\paragraph{Abstract}
+Abstract and short description
+
+\addverticalspace
+
+\section*{TUTORIAL NOTES}
+
+The tutorial notes will contain copies of the presented slides for all the talks, description of the tutorial,  bibliographies used during the tutorial as well as a general set of references related to the tutorial.
+
+\section*{SPEAKERS}
+The background of each speaker is provided in alphabetical order.
+
+\addverticalspace
+
+\noindent \textbf{1. Soumya Dutta}\\
+\emph{Los Alamos National Laboratory}\\
+\href{mailto:sdutta@lanl.gov}{sdutta@lanl.gov}\\
+\url{https://sites.google.com/view/soumyadutta/}
+
+\addverticalspace
+
+Soumya Dutta is currently a postdoctoral research associate in Data Science at Scale team at Los Alamos National Laboratory. He received his MS and Ph.D. degree in Computer Science and Engineering from the Ohio State University in May 2017 and May 2018 respectively with a focus in Computer Graphics and Visualization. His major research interests are statistical data summarization and analysis; in situ data analysis, reduction, and feature exploration; uncertainty analysis; and time-varying, multivariate data exploration. He received an honorable mention award at IEEE Visualization (SciVis track) 2016 and was nominated for the Presidential Fellowship from the Department of Computer Science and Engineering at the Ohio State University in 2017. He won best poster award in the Annual CSE Student Research Poster Exhibition at the Ohio State University in 2017 and 2018. He is also serving as a co-chair for Open Practices in IEEE Visualization (SciVis) 2019.
+
+\printbibliography[title={Relevant Publications},category=Dutta]
+
+\addverticalspace
+
+\noindent \textbf{2. Hanqi Guo}\\
+\emph{Argonne National Laboratory}\\
+\href{mailto:hguo@anl.gov}{hguo@anl.gov}\\
+\url{http://www.mcs.anl.gov/~hguo/}
+
+\addverticalspace
+
+Hanqi Guo is a ...
+
+\printbibliography[title={Relevant Publications},category=Guo]
+
+\addverticalspace
+
+\noindent \textbf{3. Hans-Christian Hege}\\
+\emph{Zuse Institute Berlin}\\
+\href{mailto:hege@zib.de}{hege@zib.de}\\
+\url{https://www.zib.de/hege/}
+
+\addverticalspace
+
+Hans-Christian Hege is a ...
+
+\printbibliography[title={Relevant Publications},category=Hege]
+
+
+\noindent \textbf{4. Han-Wei Shen}\\
+\emph{The Ohio State University}\\
+\href{mailto:shen.94@osu.edu}{shen.94@osu.edu}\\
+\url{http://web.cse.ohio-state.edu/~shen.94/shen.94/Welcome.html}
+
+\addverticalspace
+Han-Wei Shen is a ...
+
+\printbibliography[title={Relevant Publications},category=Shen]
+
+\addverticalspace
+
+
+
+% \bibliographystyle{abbrv}
+% %%use following if all content of bibtex file should be shown
+% %\nocite{*}
+% \bibliography{template}
+\end{document}
