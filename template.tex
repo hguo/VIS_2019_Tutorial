@@ -207,7 +207,13 @@ Please provide a small abstract for this section.
 \noindent\textbf{\textit{Application of Distributions in Visualization}}\\
 \textbf{Hanqi Guo}
 \paragraph{Abstract}
-Please provide a small abstract for this section.
+
+This talk presents applications of distribution-driven visualizations in understanding uncertain unsteady flows.  The goal of this study is to understand transport behavior in uncertain time-varying flow fields by redefining the
+finite-time Lyapunov exponent (FTLE) and Lagrangian coherent structure (LCS) as stochastic counterparts of their traditional deterministic definitions~\cite{Guo16}. Three new concepts are introduced: the distribution of the FTLE (D-FTLE), the FTLE of distributions (FTLE-D), and uncertain LCS (U-LCS). The D-FTLE is the probability density function of FTLE values for every spatiotemporal location, which can be visualized with different statistical measurements. The FTLE-D extends the deterministic FTLE by measuring the divergence of particle distributions. It gives a statistical overview of how transport behaviors vary in neighborhood locations. The U-LCS, the probabilities of finding LCSs over the domain, can be extracted with stochastic ridge finding and density estimation
+algorithms.  
+
+In addition, this talk will also cover scalability issues of estimating uncertain transport behaviors---stochastic flow maps (SFMs)---for visualizing and analyzing uncertain unsteady flows~\cite{Guo19}. Computing flow maps from uncertain flow fields is extremely expensive because it requires many Monte Carlo runs to trace densely seeded particles in the flow. We reduce the computational cost by decoupling the time dependencies in SFMs so that we can process shorter sub time intervals independently and then compose them together for longer time periods. Adaptive refinement is also used to reduce the number of runs for each location.  We parallelize over tasks---packets of particles in our design---to achieve high efficiency in MPI/thread hybrid programming. Such a task model also enables CPU/GPU coprocessing. We show the scalability on two supercomputers, Mira (up to 256K Blue Gene/Q cores) and Titan (up to 128K Opteron cores and 8K GPUs), that can trace billions of particles in seconds.
+
 
 \addverticalspace
 
@@ -240,7 +246,7 @@ Soumya Dutta is currently a postdoctoral research associate in Data Science at S
 
 \addverticalspace
 
-Hanqi Guo is a ...
+Hanqi Guo is an assistant computer scientist in the Mathematics and Computer Science Division at Argonne National Laboratory.  He received his PhD degree in computer science from Peking University in 2014, and the BS degree in mathematics and applied mathematics from Beijing University of Posts and Telecommunications in 2009. His research interests are mainly on uncertainty visualization, flow visualization, and large-scale scientific data visualization.
 
 \printbibliography[title={Relevant Publications},category=Guo]
 
